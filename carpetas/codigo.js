@@ -74,7 +74,7 @@ const persona ={
 /*  */
 
 //templates strings
-// bastick es ctrl + alt +}
+// bastick es ctrl + alt +}----IMPORTANTEEEEE
 const nombres="jose";
 const edads = 24;
 
@@ -161,3 +161,308 @@ const usuarios ={
 
 
 //operador ternario------------------------------------------
+
+const boleto = 'VIP';
+// let codigoAcceso;
+
+/*  */
+/* if(boleto == 'VIP'){ */
+// /*     codigoAcceso = 'VIP-123-1 */23' 
+/* }else { */
+/*     codigoAcceso = 'regular' */
+/* } */
+
+
+/* const codigoAcceso = (boleto ==='VIP')? 'VIP-123-1-23' : 'REGULAR-123-122'; */
+/* (boleto ==='VIP') ? console.log("tu boleto es de tipo VIP") : 'REGULAR-123-122'; */
+
+
+// console.log(codigoAcceso)
+
+//funciones ----------------------------------------------------------------------------
+function mensaje(){
+    //console.log("mensaje de funcion");
+}
+// mensaje();
+
+/* const saludo = function(){ */
+/*     //console.log("hola"); */
+/* } */
+/*  */
+//saludo();
+
+// -paremtros: es lo q se le manda a la funcion
+//  -argumento: lo q recibe la funcion
+// funcion de tipo flecha 
+
+// const saludo = () => console.log("hola");
+
+// parametros en funciones de tipo flecha
+
+const saludos = (nombre = 'amigo') => {
+    //console.log(`mi nombre es: ${nombre}`);
+};
+
+saludos('jose');
+saludos('genaro');
+saludos('juan');
+saludos();
+
+const operacion = (tipo,numero1, numero2) => {
+
+    if(tipo=='suma'){
+        // console.log(numero1+numero2);
+    }else if(tipo=='resta'){
+        // console.log(numero1-numero2);
+    }
+};
+
+operacion('suma',2,1);
+operacion('resta',5,3)
+
+
+//return -----------------------------------------------------
+
+let variable2
+const operacion2 = (tipo,numero1, numero2) =>{
+
+    if(tipo=='suma'){
+        variable2 =numero1+numero2;
+    }else if(tipo=='resta'){
+         variable2 =numero1+numero2;    
+        }
+
+    return variable2;
+};
+
+const variable=operacion2('suma',2,1);
+console.log(variable)
+// operacion2('resta',5,3);
+// ------------------------------------------------------
+// forma numero2  
+
+
+const operacion3= (tipo,numero1, numero2) => {
+
+    if(tipo=='suma'){
+        return numero1+numero2;
+    }else if(tipo=='resta'){
+         return numero1+numero2;    
+        }
+
+    return variable2;
+};
+
+const variable3=operacion2('suma',2,1);
+console.log("asiganando el return desde el principio "+variable3)
+// operacion2('resta',5,3);
+
+
+//scope global son variables globales 
+// podemos utilizar const, var, y let --------------------------------------------------------
+
+var nombreVar = "jose";
+
+const saludar =() =>{
+    console.log(nombreVar);
+
+    nombreVar= "genaro"
+    console.log(`EL NUEVO NOMBRE ES : ${nombreVar}`)
+}
+
+saludar();
+
+//scob o alcance local, son las variabvles que se crean dentro de una fincion y solo se pueden 
+// acceder a eelas dentro de una funcion 
+
+var obtener =(nombre) =>{
+    var numero = nombre.length;
+    console.log(`${nombre} tiene ${numero} letras`);  
+    
+    var funcionAnidada = () =>{
+        console.log(numero)
+    }
+
+    funcionAnidada();
+}
+
+obtener("jose");
+
+//scob de tipo bloque ----------------------------------------------------------------------
+
+const alumnos = {nombre:"jose", edad:23}
+
+ const edades = 19;
+ if(alumnos.edad >= 18){
+    const accesoPermitido = true;
+    if(true){
+        console.log(accesoPermitido);    
+    }
+ }
+
+
+//no usar var en variables creadas en funciones
+ if(true){
+    var nombreC="jose"
+    //console.log(nombreC)
+ }
+
+ console.log(nombreC)//puede tener alcance ala variable q esta dentro de la funcion
+
+
+//  ---------------------------- metodos para arreglos--------------------------------------
+
+const colores2 = ["azul","rojo","negro"];
+
+/* length nos permite conocer la cantidad de elementos de un arreglo */
+
+//console.log(colores.length)
+
+/*toString nos permite transfoimrmar un arreglo a una cadena de texto */
+
+// document.body.innerHTML = colores2.toString();
+
+ /* .join nos permite transformar un arreglo a una cadena de texto y separar cada elemento */
+
+ console.log(colores2.join('-'));  
+ 
+ 
+ /* sort() 
+ nos permite ordenhar nuestro arreglo de forma alfabetica */
+
+ const letras = ['c', 'b', 'd', 'a'];
+//  console.log(letras.sort());
+
+ const numerosOrdenados = [8,5,2,9,1,3];
+//  console.log(numerosOrdenados.sort());
+
+ /*.reverse nos permite ordenar un arreglo de forma descendente*/
+ const letrasDesce = ['c', 'b', 'd', 'a']; 
+//  console.log(letrasDesce.reverse());
+
+
+ //-------------------------metodo .concat()--------------------
+
+
+ const arreglo1 = [1,2,3];
+ const arreglo2 = ["A","B","C"];
+ const arreglo3 =arreglo1.concat(arreglo2);
+
+//  console.log(arreglo3);
+
+//.push nos permite agreagr unn elemento al final de u arreglo 
+
+colores.push('morado');
+console.log(colores);
+
+//el metodo  .pop() nos permite eliminar el ultimo elemento de un arreglo 
+colores.pop();
+// console.log(colores);
+
+//el metodo .shift  nos permite el primer elemento de un  arreglo 
+const dias = ['lunes','martes','miercoles', 'jueves'];
+const diaEliminado =dias.shift();
+// console.log(diaEliminado)
+
+//con .unshift agrega un elemento al iniucio del arreglo y enpuja los demas 
+dias.unshift('dominngo');
+// console.log(dias)
+
+//.splice nos permite insertar a un arreglo donde le especifiquemos 
+const amigos1  =['jose', 'cesar' ,'manuel'];
+amigos1.splice(0,0, 'rafael','roberto');
+// console.log(amigos1);
+
+
+//.slice nos permite copiar una parte del arreglo a otro
+const frutas = ['fresa', 'manzana', 'piña', 'mango'];
+const frutasFav =frutas.slice(1,3);
+// console.log(frutasFav);
+
+
+
+//-------------metodo para arreglo .indexOf()
+const nombresA = ['jose', 'rafael', 'estefania','gema','jose', 45];
+// console.log( nombresA.indexOf('jose'));
+
+
+
+//.lastIndexOf()
+//console.log(nombresA.lastIndexOf('jose'));
+
+
+//metodo .forEach() nos permite ejecutar una funcion poor cada elemento
+nombresA.forEach((nombre, index)=>{
+    //console.log(`hola: ${nombre} (${index})`)
+});
+
+
+//metodo .find() nos permite reccorrer un arreglo y devuelve el  rimer elemento que retornemos 
+
+const resualtado = nombresA.find((nombre)=>{    
+    if(nombre[0] === 'j'){
+        return nombre;
+    }
+});
+
+//console.log(resualtado);
+
+
+//metodo .map() nos permite ejecutar una funcioon por cada elemento y crear un nuevo arreglo en -------
+// base a los resultados de la funcion 
+/*  */
+/* const nombresMayusculas = nombresA.map((nombre) =>{ */
+/*     return nombre.toUpperCase(); */
+/* }); */
+
+//se puede resumir el codigo anterior
+
+//const nombresMayusculas = nombresA.map((nombre) => nombre.toUpperCase());
+
+
+//console.log(nombresMayusculas);
+
+
+//metodo .filter() nos permite ejecutar una funcion por cada elemento y crear un arreglo en base------------- 
+// a los resultados de esa funcion 
+
+const nombres4Letras = nombresA.filter((nombre)=> {
+    if(nombre.length === 4){
+        return nombre;
+    }
+});
+
+//console.log(nombres4Letras);
+
+
+
+//metodo de .includes() nos permite saber si el arreglo contiene un elemento especificado 
+
+// console.log(nombresA.includes('carlos')); 
+
+//metodo de .every nos permite ejecutar un condicional sobre cada elemento y nos devuelve true
+// si todos los elementos nos cumplieron la condicion 
+/* const nombresValidos = nombresA.every ((nombre) =>  { */
+/*     if(typeof nombre ==='string'){ */
+/*         return true; */
+/*     }else { */
+/*         return false; */
+/*     } */
+/* }) */
+
+// console.log(`todos los elementos son validos? : ${nombresValidos}`);
+
+//metodo de .some() nos permite ejecutar una condicional sobre cada elemento y nos devuelve true si algun 
+// elemento cumplio la condicion 
+
+const nombresValidos = nombresA.some ((nombre) =>  {
+    if(typeof nombre ==='string'){
+        return true;
+    }else {
+        return false;
+    }
+})
+
+console.log(`todos los elementos son validos? : ${nombresValidos}`);
+//true si hay un valor invalido
+//false si no hay algun valor iunvalido
