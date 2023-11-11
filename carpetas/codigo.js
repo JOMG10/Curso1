@@ -457,7 +457,7 @@ const nombres4Letras = nombresA.filter((nombre)=> {
 
 const nombresValidos = nombresA.some ((nombre) =>  {
     if(typeof nombre ==='string'){
-        return true;
+        return true;    
     }else {
         return false;
     }
