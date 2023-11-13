@@ -488,5 +488,39 @@ const resultados = Object.keys(usuarioO);
 //Object.values()  --nos devuelve un arreglo con los valores del objeto
 
 const resultadosV = Object.values(usuarioO);
-console.log(resultadosV);
+// console.log(resultadosV);
+
+//object.entries()
+//nos devuelve un arreglo con las parejas de clave y el valor del objeto 
+
+const resultadosE = Object.entries(usuarioO);
+console.log(resultadosE);
+
+//console.log(`el objeto tiene ${resultadosE.length} propiedades`);
+
+//---------------------------------METODOS PARA STRING------------------------------------
+//.length devuelve el numero de caracteres de una cadena de texto 
+const texto = 'hola soy jose';
+//console.log(texto.length);
+
+//.indexOf()  .lastIndexOf()   -Devuelve el index del primer/ ultimoo caracter especificado 
+console.log(texto.indexOf('o'));
+console.log(texto.lastIndexOf('o'));
+
+//.slice() -devuelve el fracmento de una cadena de texto 
+/* primer parametro:  index desde donde queremos cortar  */
+/* segundo parametro (opcional) - index hasta donde queremos cortar  */
+
+const textoN = 'hola soy ganaro';
+// const index = textoN.indexOf('g');
+// const lastIndex = textoN.lastIndexOf('o');
+// console.log(textoN.slice(index, lastIndex+1 ));
+// const lastIndex = textoN.slice(-6, -2);
+
+//.replace()   -devuelve una cadena de texto en donde remplaza un valor ppor otro 
+
+const textoR = 'hola soy genaro';
+console.log(textoR.replace('genaro', 'jose'));
+
+
 
