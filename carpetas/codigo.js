@@ -452,17 +452,41 @@ const nombres4Letras = nombresA.filter((nombre)=> {
 
 // console.log(`todos los elementos son validos? : ${nombresValidos}`);
 
-//metodo de .some() nos permite ejecutar una condicional sobre cada elemento y nos devuelve true si algun 
-// elemento cumplio la condicion 
+//metodo de .some() nos permite ejecutar una condicional sobre cada elemento y ----/
+// nos devuelve true si algun // elemento cumplio la condicion 
 
 const nombresValidos = nombresA.some ((nombre) =>  {
     if(typeof nombre ==='string'){
         return true;    
     }else {
         return false;
-    }
+    } 
 })
 
-console.log(`todos los elementos son validos? : ${nombresValidos}`);
+//console.log(`todos los elementos son validos? : ${nombresValidos}`);
 //true si hay un valor invalido
 //false si no hay algun valor iunvalido
+
+const usuarioO = {
+    nombre : 'jose',
+    edad : 23,
+    amigos : ['angel', 'cesar', 'manuel'],
+    saludo : () => {
+        console.log("hola");
+    }
+}
+
+//metodos propios  los objetos pueden tener metodos personalizados --------/
+//usuario.saludo();
+
+//Object.keys() --nos devuelve un arreglo que contiene las llaves (keys) del objeto------/
+
+const resultados = Object.keys(usuarioO);
+//console.log(resualtados);
+
+
+//Object.values()  --nos devuelve un arreglo con los valores del objeto
+
+const resultadosV = Object.values(usuarioO);
+console.log(resultadosV);
+
