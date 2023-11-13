@@ -286,6 +286,7 @@ var obtener =(nombre) =>{
     funcionAnidada();
 }
 
+
 obtener("jose");
 
 //scob de tipo bloque ----------------------------------------------------------------------
@@ -521,6 +522,60 @@ const textoN = 'hola soy ganaro';
 
 const textoR = 'hola soy genaro';
 console.log(textoR.replace('genaro', 'jose'));
+
+//.split()  --convierte una cadena de texto en un arreglo, tenemos quer esepcificar donde cortar cada elemento 
+
+console.log(textoN.split(' '));
+
+
+//metodo .toUpperCase() devuelve una cadena de texto en mayusculas -- .toLowerCase() er minusculas
+
+const textoMayusculas= texto.toUpperCase();
+const textoMinusculas= texto.toLowerCase();
+
+
+//--------------------------------------METODOS PARA NUMEROS--------------------------
+//metodo .toString 
+const numeroS = 10;
+console.log(numeroS, typeof numeroS);
+const textoS = numeroS.toString();
+console.log(textoS, typeof textoS);
+
+
+//metodo .toFixed()
+//permite obtener un numero con la cantidad de decimales especificados 
+const pi= 3.1416
+console.log(pi.toFixed(1));
+
+//metodo parseInt() intenta transformar un valor a un entero
+// const numero5 =  parseInt(prompt('Escribe un numero'));
+// const numero6 =  parseInt(prompt('Escribe un numero'));
+// 
+// console.log(numero5 + numero6)
+// 
+// 
+// metodo parseFloat() intenta transformar un valor a un decimal 
+// const numero7 =  parseFloat(prompt('Escribe un numero'));
+// const numero8 =  parseFloat(prompt('Escribe un numero'));
+// 
+// const suma = numero7 +numero8 ;
+// 
+// console.log(numero7 + numero8); 
+
+//Math.random()  genera un numnero al azar entre 0 y 1
+const numeroM = Math.random();
+
+//Math.floor() --este metodo redondea un numero hacia abajo 
+// console.log(Math.floor(suma));
+// 
+// Math.ceil() redondea un numero hacia arriba 
+// console.log (Math.ceil(suma));
+// 
+
+//metodo Math.round() redondea al numero mas cercano 
+console.log(Math.round(11.999));  
+
+
 
 
 
