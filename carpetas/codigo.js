@@ -576,6 +576,73 @@ const numeroM = Math.random();
 console.log(Math.round(11.999));  
 
 
+// ---------------------OPERADOR DE TIPO SPREAD------------------------------
+//PERMITE TOMAR LOS ELEMENTOS DE UN ARREGLO U OBJETO Y EXPANDIRLOS A OTRO SITIO
+
+const comidaFavorita = ['pizza', 'sushi',...frutas];
+
+const datosLogin = {
+    correo: 'jose@gmail.com',
+    password: '123'
+}
+
+const Usuario = {
+    nombre:'jose',
+    ...datosLogin,
+    edad: 23
+}
 
 
+// console.log(Usuario);
+
+//--------------------------PARAMETROS RES-------------------
+//permite q una funcion contenga un numero indefinido de argumentos.
+//los argumentos extra que encuentre los convertira en un arreglo 
+
+const registrarUsuario = (nombre, correo, ...datosAdicionales) => {
+    //console.log(nombre,correo, datosAdicionales)
+}
+
+registrarUsuario('jose', 'josemartinez@gmail.com');
+registrarUsuario('jose', 'josemartinez@gmail.com', 28, 'mexico');
+
+
+//----------------------------------DESTRUCTURACION DE OBJETOS --------------------------
+//NOS PERMITE OBTENER LOS ELEMENTOS O PROPIEDADES DDE UN ARREGLO U OBJETO Y GUARDARLOS EN UNA VARIABLE 
+
+const primerAmigo = amigos[0];
+const segundoAmigo = amigos[1];
+
+const [primerA,segundoA, tercerA] = amigos;
+
+// console.log(segundoA);
+
+const personas ={
+    nombreP: 'jose',
+    edad:23,
+    pais: 'mexico'
+}
+
+const {nombreP, pais} = personas;
+// console.log(nombreP, pais);
+
+const mostrarEdad = (nombre,edad) => {
+    console.log(`${nombre} tiene ${edad} años`);
+}
+
+mostrarEdad(nombreP, edad);
+
+
+
+//--------------------------------CICLO FOR -------------------------
+const nombreS = ['jose', 'martinez', 'cristian', 'stefania'];
+nombreS.forEach((nombreS) => {
+    console.log(nombreS);
+})
+
+//ciclo for repite un bloque de codigo miestras se cimpla la condicion
+
+for(let numero = 1; numero < 11; numero++){
+    console.log(numero)
+}
 
