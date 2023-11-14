@@ -635,14 +635,48 @@ mostrarEdad(nombreP, edad);
 
 
 //--------------------------------CICLO FOR -------------------------
-const nombreS = ['jose', 'martinez', 'cristian', 'stefania'];
+const nombreS = ['jose', 'jartinez', 'jristian', 'stefania'];
 nombreS.forEach((nombreS) => {
     console.log(nombreS);
 })
 
-//ciclo for repite un bloque de codigo miestras se cimpla la condicion
+//ciclo for repite un bloque de codigo miestras se cumpla la condicion
 
-for(let numero = 1; numero < 11; numero++){
+for(let numero = 50; numero >0 ; numero-- ){
     console.log(numero)
 }
 
+
+for(let numero = 0; numero < nombreS.length ; numero++ ){
+    console.log(nombreS[numero]);
+}
+
+//sentencia break:-------------
+for(let i = 0; i <nombreS.length; i++){
+    if(nombreS[i][0] !== 'j'){
+        console.log(nombreS[i] + ' este nombre no empieza con la letra j')
+        break;
+    }
+
+    console.log(nombreS[i]);
+}
+
+
+//--------------------SENTENCIA DE CONTINUE-----------------------------
+const invitados = ['jose', 'martinez','jorge', 'estefania', 'erika'];
+console.log('lista de personas de aceptadas')
+
+for(let i=0; i< invitados.length; i++){
+    if(invitados[i] ==='jorge'){
+        continue;
+    }
+    console.log(invitados[i]);
+
+}
+
+
+//---------------------ciclo while---------------------------------------
+let contador = 0;
+while(true){ 
+    console.log(contador++)
+}
