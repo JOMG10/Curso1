@@ -677,6 +677,38 @@ for(let i=0; i< invitados.length; i++){
 
 //---------------------ciclo while---------------------------------------
 let contador = 0;
-while(true){ 
-    console.log(contador++)
+while(contador <=10){ 
+    console.log(contador);
+    contador++;
 }
+
+//ciclo do while
+
+let i= 0;
+do{
+    console.log(i);
+    i++;
+}while(i <=10);
+
+
+//ciclo forEach
+
+amigos.forEach((nombre, index) => {
+    console.log(`el amigo numero ${index} su nombre es ${nombre}`)
+})
+
+//ciclo for in 
+for(propiedad in persona){
+    persona[propiedad] = '';
+}
+
+//ciclo for of
+const etiquetas=document.head.children;
+console.log(etiquetas);
+
+for(elemento of etiquetas){
+    console.log(elemento);
+}
+[...etiquetas].forEach((elemento) =>{
+    console.log(elemento);
+})
