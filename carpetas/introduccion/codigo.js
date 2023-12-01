@@ -26,11 +26,13 @@ const resultado=7 > 10? 'el primer valor es mayor q el segundo ': 'el segundo va
 //propiedad length: sirve para acceder alas propiedad de los valores de la variable
 //funcion push sirve para agregar un elemento al final del arreglo 
 
+
 const arreglo= [ "nombre","apellidos", "edad",
 {nombre:"jose", edad:24}
 ]
 
 const amigos=["jose","martinez","genaro"];
+
 
 const colores=[""];
 colores[0]="rojo";
@@ -42,7 +44,7 @@ colores.push("verde");
 
 const personaArreglo=["jose", 23, "correo@gmail.com", true];
 
-const persona ={
+const persona = {
     nombre: "jose",
     edad: 23,
     apellido:"martinez",
@@ -671,7 +673,6 @@ for(let i=0; i< invitados.length; i++){
         continue;
     }
     console.log(invitados[i]);
-
 }
 
 
