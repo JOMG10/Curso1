@@ -1,0 +1,4 @@
+--npm install rollup --save-dev
+--npm i react 
+
+npm run build
