@@ -10,3 +10,4 @@ caja1.addEventListener('click', (e)=>{
     e.stopPropagation()
     console.log("hiciste click en caja1")
 })
+
