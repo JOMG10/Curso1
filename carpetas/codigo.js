@@ -5,8 +5,38 @@ const metodo =() =>{
     console.log(variable)
 }
 
-const array = ["jose", "martinez","juan"]
+// 
 
+var nombre = ""
+var apellido = ""
+
+const objeto = ['jose','martinez']
+
+
+
+const array = [
+    {
+        nombre:"jose",
+        apellido :"martinez"
+    },
+    {
+        nombre:"juan",
+        apellido:"alvaro"
+    }
+
+]
+
+
+array.forEach ((nombre, i)=>{
+    console.log(nombre)
+    const cantidad = nombre.length
+    if(cantidad < 5){
+        console.log(`el nombre es: ${nombre} y su posicion es: ${i} y la cantidad es ${cantidad}`)
+    }
+   
+})
+
+/*
 const objeto = {
     nombre: "jose",
     apellido: "martinez",
@@ -16,18 +46,8 @@ const objeto = {
     },
     fun : () =>{
         console.log("realizando funcion")
-    }
-
+   } }
 }
-
-
-array.forEach ((nombre, i)=>{
-    const cantidad = nombre.length
-    if(cantidad < 5){
-        console.log(`el nombre es: ${nombre} y su posicion es: ${i} y la cantidad es ${cantidad}`)
-    }
-   
-})
 
 const nombreS = ['jose', 'jartinez', 'jristian', 'stefania'];
 
@@ -77,3 +97,4 @@ for (let i = 0; i < array.length; i++) {
 // for: Puedes romper la iteración utilizando break y saltar a la siguiente iteración con continue.
 // forEach: No puedes utilizar break ni continue para afectar la iteración.
 
+*/

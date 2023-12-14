@@ -15,6 +15,7 @@ class Usuario{
 }
 
 const usuario = new Usuario ('genaro','jose');
+const tipo = usuario.tipo;
 const nombreCompleto = usuario.obtenerNombreCompleto();
 console.log(nombreCompleto);
 
